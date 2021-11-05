@@ -1,0 +1,13 @@
+name: batch-docker-conda
+channels:
+  - conda-forge
+  - anaconda
+dependencies:
+  - python=3.6
+  - flask
+  - nomkl
+  - pillow=7.1.2
+  - scikit-image
+  - numpy
+  - mxnet-mkl
+  - boto3
