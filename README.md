@@ -4,7 +4,9 @@
 
 This repository demostrates provisioning the necessary infrastructure for running a job on AWS Batch using Cloud Development Kit (CDK).
 The AWS Batch job reads images from an S3 bucket, runs inference over image-to-vector computer vision model, and stores the results in DynamoDB.
-Code can be easily modified to fit other batch job transformations you might want to perform.
+Code can be easily modified to fit other batch job transformations you might want to perform. 
+
+This code repository is part of the [Deep learning image vector embeddings at scale using AWS Batch and CDK](https://aws.amazon.com/blogs/devops/deep-learning-image-vector-embeddings-at-scale-using-aws-batch-and-cdk/) AWS DevOps Blog post.
 
 ## Pre-requisites
 
