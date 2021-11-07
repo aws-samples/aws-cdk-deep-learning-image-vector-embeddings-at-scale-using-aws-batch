@@ -1,7 +1,7 @@
 FROM continuumio/miniconda3:4.9.2
 
 # Update the system
-RUN apt-get update && apt-get install -y
+RUN apt-get update --allow-releaseinfo-change-suite && apt-get install -y
 
 # Copy content of this dir to the docker image
 COPY . /app
