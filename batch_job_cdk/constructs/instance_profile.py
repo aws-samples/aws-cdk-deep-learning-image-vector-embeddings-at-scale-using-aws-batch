@@ -21,7 +21,7 @@ class InstanceProfile(core.Construct):
 
     def _create_instance(self):
         return iam.CfnInstanceProfile(self,
-            self._id + "cfn-instance-profile",
+            self._id + "automm-cv-bench-cfn-instance-profile",
             roles=self._roles
         )
 

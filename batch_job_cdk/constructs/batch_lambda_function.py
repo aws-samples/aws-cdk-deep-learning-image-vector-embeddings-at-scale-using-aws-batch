@@ -23,7 +23,8 @@ class BatchLambdaFunction(core.Construct):
             'lambda-function-role',
             assumed_by=iam.ServicePrincipal('lambda.amazonaws.com'),
             managed_policies=[
-                iam.ManagedPolicy.from_aws_managed_policy_name("AWSBatchFullAccess")
+                iam.ManagedPolicy.from_aws_managed_policy_name("AWSBatchFullAccess"),
+                iam.ManagedPolicy.from_aws_managed_policy_name("service-role/AWSLambdaBasicExecutionRole")
             ])
 
         self._lambda_function = _lambda.Function(self,
@@ -32,7 +33,7 @@ class BatchLambdaFunction(core.Construct):
             code=_lambda.Code.from_asset(code_path),
             handler="main.handler",
             timeout=core.Duration.seconds(timeout),
-            runtime=_lambda.Runtime.PYTHON_3_6,
+            runtime=_lambda.Runtime.PYTHON_3_8,
             role = self._lambda_function_role,
             environment=environment
         )
